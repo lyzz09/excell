@@ -39,9 +39,14 @@ section {
 }
 
 .p1 span {
-    font-size: 2.4em; 
+  font-size: 3em; /* Tamanho grande para a primeira letra */
     font-weight: bold;
-    color: #000000;
+    color: #1a73e8; /* Cor de destaque */
+    float: left; /* Faz a letra flutuar e o texto envolver */
+    margin-right: 5px; /* Espaçamento à direita da letra */
+    line-height: 0.9; /* Ajusta a altura da linha para que a letra não force o espaçamento */
+}
+  
 }
 
 .p2 {
@@ -141,44 +146,58 @@ video {
 }
 /* Seção 3 - Sobre o Autor e Tela Inicial */
 .section3 {
-    /* Centraliza o conteúdo da seção (textos e imagem) */
     text-align: center;
     background-color: #b8d5e3;
-    padding: 30px; /* Adiciona padding para afastar o conteúdo das bordas */
+    padding: 30px;
     margin-bottom: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.span2 {
-    display: block;
-    margin-bottom: 20px;
+/* Novo contêiner para o layout lateral (Flexbox) */
+.author-content {
+    display: flex; /* Habilita o Flexbox */
+    gap: 30px; /* Espaço entre a foto e o texto */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    max-width: 900px;
+    margin: 20px auto 0 auto; /* Centraliza o contêiner de conteúdo */
+    text-align: left; /* Garante que o texto dentro seja alinhado à esquerda */
 }
 
+/* Estilo para a imagem (Giocondo) */
 .img2 {
-    /* Define o tamanho da imagem */
-    width: 150px;
-    height: 150px;
-    /* Faz a imagem ser redonda */
+    /* Define o tamanho da imagem (menor para caber na lateral) */
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    /* Garante que a imagem preencha o círculo sem distorcer */
     object-fit: cover;
-    /* Borda para destaque */
     border: 3px solid #1a73e8;
-    /* Garante que a imagem seja tratada como um bloco centralizado */
-    display: block;
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-    margin-bottom: 20px; /* Espaçamento abaixo da foto */
+    /* Faz com que a imagem não encolha */
+    flex-shrink: 0; 
 }
 
+/* Estilo para a descrição do autor */
 .p5 {
     line-height: 1.6;
-    margin: 15px auto;
-    max-width: 800px;
-    text-align: center;
+    margin: 0; /* Remove margens padrão para melhor controle no Flexbox */
+    max-width: 100%;
+    text-align: justify; /* Alinha o texto na descrição */
 }
 
+/* Responsividade: Volta para layout empilhado em telas pequenas */
+@media (max-width: 600px) {
+    .author-content {
+        flex-direction: column; /* Empilha a foto e o texto verticalmente */
+        align-items: center; /* Centraliza a foto no modo coluna */
+        text-align: center;
+    }
+    .img2 {
+        margin-bottom: 20px;
+    }
+    .p5 {
+        text-align: center; /* Centraliza o texto no modo coluna */
+    }
+}
 /* ... (outros estilos) ... */
 
 mark {
@@ -363,4 +382,5 @@ footer {
         flex-basis: 100%;
     }
 }
+
 

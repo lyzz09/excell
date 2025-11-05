@@ -39,7 +39,7 @@ section {
 }
 
 .p1 span {
-    font-size: 1.9em; 
+    font-size: 2.4em; 
     font-weight: bold;
     color: #000000;
 }
@@ -139,11 +139,15 @@ video {
     height: auto;
     margin-bottom: 15px;
 }
-
 /* Seção 3 - Sobre o Autor e Tela Inicial */
 .section3 {
+    /* Centraliza o conteúdo da seção (textos e imagem) */
     text-align: center;
-    background-color: #b8d5e3; /* Fundo levemente diferente */
+    background-color: #b8d5e3;
+    padding: 30px; /* Adiciona padding para afastar o conteúdo das bordas */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .span2 {
@@ -152,11 +156,20 @@ video {
 }
 
 .img2 {
+    /* Define o tamanho da imagem */
     width: 150px;
     height: 150px;
+    /* Faz a imagem ser redonda */
     border-radius: 50%;
+    /* Garante que a imagem preencha o círculo sem distorcer */
     object-fit: cover;
+    /* Borda para destaque */
     border: 3px solid #1a73e8;
+    /* Garante que a imagem seja tratada como um bloco centralizado */
+    display: block;
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    margin-bottom: 20px; /* Espaçamento abaixo da foto */
 }
 
 .p5 {
@@ -165,6 +178,8 @@ video {
     max-width: 800px;
     text-align: center;
 }
+
+/* ... (outros estilos) ... */
 
 mark {
     background-color: #c9e2ff; /* Destaque suave */
@@ -348,3 +363,4 @@ footer {
         flex-basis: 100%;
     }
 }
+
